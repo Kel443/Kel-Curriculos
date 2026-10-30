@@ -527,7 +527,12 @@ textarea {
   overflow: hidden;
   margin: 2vh 0;
 }
-
+.KelCv{
+    margin-bottom: 10px;
+}
+.H3Link{
+    margin-bottom: 10px;
+}
 /*-----------------------------footer-------------------------------------------*/
 footer {
     width: 100%;

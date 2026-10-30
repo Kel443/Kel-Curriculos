@@ -106,6 +106,12 @@
         .btn-voltar-Top:hover {
             background: #34495e;
         }
+        .KelCv{
+            margin-bottom: 10px;
+        }
+        .H3Link{
+            margin-bottom: 10px;
+        }
 /* ---------------------------------------------------
    MEDIA QUERIES PARA RESPONSIVIDADE
  ------------------------------------------------------ */
