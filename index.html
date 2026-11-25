@@ -1,147 +1,492 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta name="google-site-verification" content="Zp1JqtE5XsuEKwaoMO6hulJcwFIJanGYMoV6h7CNBFo" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Estilos/style.css">
-    <link rel="stylesheet" href="Estilos/estilosDeBotoes.css">
-    <link rel="stylesheet" href="Estilos/MediaQuery.css">
-    <link rel="stylesheet" href="Estilos/StyleContribuição.css">
-    <link rel="shortcut icon" href="Imagens/IconCurriculo.png" type="image/IconCurriculo">
+  <head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+    </script>
+    <meta
+      name="google-site-verification"
+      content="Zp1JqtE5XsuEKwaoMO6hulJcwFIJanGYMoV6h7CNBFo"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Estilos/style.css" />
+    <link rel="stylesheet" href="Estilos/estilosDeBotoes.css" />
+    <link rel="stylesheet" href="Estilos/MediaQuery.css" />
+    <link rel="stylesheet" href="Estilos/StyleContribuição.css" />
+    <link
+      rel="shortcut icon"
+      href="Imagens/IconCurriculo.png"
+      type="image/IconCurriculo"
+    />
     <title>Kel Currículos</title>
-</head>
-<body>
-  <nav class="NavInicial" id="NavInicial">
-    <div class="LOGO-Imagem">
-        <img class="LogoKelCV" src="/Imagens/KelCV-Curriculo-removebg2.png" alt="LogoKelCV">
-    </div>
-    <button class="menu-toggle" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-     <ul class="ULInicial">
-       <li class="LiInicial">
-         <a class="LinkInicio" href="/index.html"><p class="Pmenu"  id="Inicio" >Inicio</p></a>
-         <a class="LinkInicio Ajuda" href="/Paginas/Ajuda.html"><p class="Pmenu">Ajuda</p></a>
-         <a class="LinkInicio" href="/Paginas/Contatos.html"><p class="Pmenu Contatos">Contato</p></a>
-         <a class="LinkInicio" href="#VagasEmprego"><p class="Pmenu">Vagas</p></a>
-         <a class="LinkInicio" href="#Contribuição"><p class="Pmenu">Contribuir</p></a>
-       </li>
-     </ul>
-  </nav>
-    <h1 class="Titulo scroll-animate">Crie Seu Currículo e Mostre Seu Potencial</h1>
-    <p class="Descrição scroll-animate scroll-animate-delay-1">Preencha os campos abaixo para criar seu currículo.</p>
+  </head>
+  <body>
+    <nav class="NavInicial" id="NavInicial">
+      <div class="LOGO-Imagem">
+        <img
+          class="LogoKelCV"
+          src="/Imagens/KelCV-Curriculo-removebg2.png"
+          alt="LogoKelCV"
+        />
+      </div>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="ULInicial">
+        <li class="LiInicial">
+          <a class="LinkInicio" href="/index.html"
+            ><p class="Pmenu" id="Inicio">Inicio</p></a
+          >
+          <a class="LinkInicio Ajuda" href="/Paginas/Ajuda.html"
+            ><p class="Pmenu">Ajuda</p></a
+          >
+          <a class="LinkInicio" href="/Paginas/Contatos.html"
+            ><p class="Pmenu Contatos">Contato</p></a
+          >
+          <a class="LinkInicio" href="#VagasEmprego"
+            ><p class="Pmenu">Vagas</p></a
+          >
+          <a class="LinkInicio" href="#Contribuição"
+            ><p class="Pmenu">Contribuir</p></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <h1 class="Titulo scroll-animate">
+      Crie Seu Currículo e Mostre Seu Potencial
+    </h1>
+    <p class="Descrição scroll-animate scroll-animate-delay-1">
+      Preencha os campos abaixo para criar seu currículo.
+    </p>
     <section class="container">
-        <form action=""  autocomplete="on" class="formulario1 scroll-animate scroll-animate-delay-2" id="FormFormulario1">
-            <div class="DivEtapa1" id="DivEtapa1">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5vh; flex-wrap: wrap; gap: 10px;">
-                <h2>Dados Pessoais</h2>
-                <button type="button" id="BtnResetarDados" class="btn-resetar-dados">Limpar Currículo</button>
-              </div>
-                <label for="Nome">Nome completo</label>
-                <input type="text"  id="Nome" placeholder="Digite seu nome completo">
-                <label for="Estados">Estados</label>
-                <select  class="Estados" name="estados" id="Estados"> 
-                    <option>Selecione o Estado</option> 
-                    <option value="ac">Acre</option> 
-                    <option value="al">Alagoas</option> 
-                    <option value="am">Amazonas</option> 
-                    <option value="ap">Amapá</option> 
-                    <option value="ba">Bahia</option> 
-                    <option value="ce">Ceará</option> 
-                    <option value="df">Distrito Federal</option> 
-                    <option value="es">Espírito Santo</option> 
-                    <option value="go">Goiás</option> 
-                    <option value="ma">Maranhão</option> 
-                    <option value="mt">Mato Grosso</option> 
-                    <option value="ms">Mato Grosso do Sul</option> 
-                    <option value="mg">Minas Gerais</option> 
-                    <option value="pa">Pará</option> 
-                    <option value="pb">Paraíba</option> 
-                    <option value="pr">Paraná</option> 
-                    <option value="pe">Pernambuco</option> 
-                    <option value="pi">Piauí</option> 
-                    <option value="rj">Rio de Janeiro</option> 
-                    <option value="rn">Rio Grande do Norte</option> 
-                    <option value="ro">Rondônia</option> 
-                    <option value="rs">Rio Grande do Sul</option> 
-                    <option value="rr">Roraima</option> 
-                    <option value="sc">Santa Catarina</option> 
-                    <option value="se">Sergipe</option> 
-                    <option value="sp">São Paulo</option> 
-                    <option value="to">Tocantins</option> 
-                </select>
+      <form
+        action=""
+        autocomplete="on"
+        class="formulario1 scroll-animate scroll-animate-delay-2"
+        id="FormFormulario1"
+      >
+        <div class="DivEtapa1" id="DivEtapa1">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 1.5vh;
+              flex-wrap: wrap;
+              gap: 10px;
+            "
+          >
+            <h2>Dados Pessoais</h2>
+            <button
+              type="button"
+              id="BtnResetarDados"
+              class="btn-resetar-dados"
+            >
+              Limpar Currículo
+            </button>
+          </div>
+          <label for="Nome">Nome completo</label>
+          <input type="text" id="Nome" placeholder="Digite seu nome completo" />
+          <label for="Estados">Estados</label>
+          <select class="Estados" name="estados" id="Estados">
+            <option>Selecione o Estado</option>
+            <option value="ac">Acre</option>
+            <option value="al">Alagoas</option>
+            <option value="am">Amazonas</option>
+            <option value="ap">Amapá</option>
+            <option value="ba">Bahia</option>
+            <option value="ce">Ceará</option>
+            <option value="df">Distrito Federal</option>
+            <option value="es">Espírito Santo</option>
+            <option value="go">Goiás</option>
+            <option value="ma">Maranhão</option>
+            <option value="mt">Mato Grosso</option>
+            <option value="ms">Mato Grosso do Sul</option>
+            <option value="mg">Minas Gerais</option>
+            <option value="pa">Pará</option>
+            <option value="pb">Paraíba</option>
+            <option value="pr">Paraná</option>
+            <option value="pe">Pernambuco</option>
+            <option value="pi">Piauí</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="rn">Rio Grande do Norte</option>
+            <option value="ro">Rondônia</option>
+            <option value="rs">Rio Grande do Sul</option>
+            <option value="rr">Roraima</option>
+            <option value="sc">Santa Catarina</option>
+            <option value="se">Sergipe</option>
+            <option value="sp">São Paulo</option>
+            <option value="to">Tocantins</option>
+          </select>
 
+          <label for="Cidade">Cidade</label>
+          <input type="" name="cidade" id="Cidade" placeholder="Uibaí/Ba" />
 
-                <label for="Cidade">Cidade</label>
-                <input type="" name="cidade" id="Cidade" placeholder="Uibaí/Ba">
+          <label for="Email">Email</label>
+          <input type="email" id="Email" placeholder="exemplo@email.com" />
 
-                <label for="Email">Email</label>
-                <input type="email"  id="Email" placeholder="exemplo@email.com">
+          <label for="DDD">DDD</label>
+          <input type="text" name="contato" id="DDD" placeholder="00" />
 
-                <label for="DDD">DDD</label>
-                <input type="text" name="contato" id="DDD" placeholder="00">
+          <label for="whatsapp">Whatsapp</label>
+          <input type="text" id="whatsapp" placeholder="00000-0000" />
 
-                <label for="whatsapp">Whatsapp</label>
-                <input type="text"  id="whatsapp" placeholder="00000-0000">
+          <h5 class="LabelRedeSocial">Selecione sua rede social</h5>
+          <div class="rede-social">
+            <button type="button" onclick="mostrarInput()" class="BtnInput">
+              <input
+                type="radio"
+                name="rede-social"
+                id="RadioGithub"
+                placeholder="Github"
+              />
+              <label for="RadioGithub" class="LabelGithub">Github</label>
+            </button>
 
-                <h5 class="LabelRedeSocial">Selecione sua rede social</h5>
-                <div class="rede-social">
-                    <button type="button" onclick="mostrarInput()" class="BtnInput">
-                        <input type="radio" name="rede-social" id="RadioGithub" placeholder="Github">
-                        <label for="RadioGithub" class="LabelGithub">Github</label>
-                    </button>
+            <button type="button" onclick="mostrarInput()" class="BtnInput">
+              <input
+                type="radio"
+                name="rede-social"
+                id="RadioLinkedIn"
+                placeholder="LinkedIn"
+              />
+              <label for="RadioLinkedIn" class="LabelLinkedIn">LinkedIn</label>
+            </button>
 
-                    <button type="button" onclick="mostrarInput()" class="BtnInput">
-                        <input type="radio" name="rede-social" id="RadioLinkedIn" placeholder="LinkedIn">
-                        <label for="RadioLinkedIn" class="LabelLinkedIn">LinkedIn</label>
-                    </button>
+            <button type="button" onclick="mostrarInput()" class="BtnInput">
+              <input
+                type="radio"
+                name="rede-social"
+                id="Todas"
+                placeholder="Todos"
+              />
+              <label for="Todas" class="LabelTodas">Todas</label>
+            </button>
+          </div>
+          <div class="DivSocial">
+            <h4 class="A4Social">Digite sua rede social</h4>
+            <input
+              type="text"
+              class="InputGithub"
+              id="InputGithub"
+              placeholder="Github"
+            />
+            <input
+              type="text"
+              class="InputLinkedIn"
+              id="InputLinkedIn"
+              placeholder="LinkedIn"
+            />
+          </div>
 
-                    <button type="button" onclick="mostrarInput()" class="BtnInput">
-                        <input type="radio" name="rede-social" id="Todas" placeholder="Todos">
-                        <label for="Todas" class="LabelTodas">Todas</label>
-                    </button>
-                </div>
-                <div class="DivSocial">
-                  <h4 class="A4Social">Digite sua rede social</h4>
-                  <input type="text" class="InputGithub"  id="InputGithub" placeholder="Github">
-                  <input type="text" class="InputLinkedIn"  id="InputLinkedIn" placeholder="LinkedIn">
-                </div>
+          <!-- Seção de Foto Opcional -->
+          <div
+            class="secao-foto-controle"
+            style="
+              margin-top: 2vh;
+              border-top: 1px solid rgba(0, 0, 0, 0.15);
+              padding-top: 2vh;
+            "
+          >
+            <h4 style="font-size: 1.1rem; margin-bottom: 1vh">
+              Foto do Currículo
+            </h4>
 
-                <!-- Seção de Foto Opcional -->
-                <div class="secao-foto-controle" style="margin-top: 2vh; border-top: 1px solid rgba(0, 0, 0, 0.15); padding-top: 2vh;">
-                  <h4 style="font-size: 1.1rem; margin-bottom: 1vh;">Foto do Currículo</h4>
-                  
-                  <div class="opcoes-foto-toggle" style="margin-bottom: 1.5vh;">
-                    <label class="switch-container" style="display: flex; align-items: center; cursor: pointer; font-weight: normal; gap: 8px;">
-                      <input type="checkbox" id="IncluirFoto" name="incluir-foto" style="margin-top: 0; width: auto; height: auto; cursor: pointer;">
-                      <span>Deseja incluir foto no currículo?</span>
-                    </label>
-                  </div>
-                  
-                  <div id="ControleFotoUpload" class="controle-foto-upload" style="display: none; flex-direction: column; gap: 1.5vh;">
-                    <div>
-                      <label for="FotoInput" class="custom-file-upload" style="display: inline-block; background-color: var(--Botoes); color: white; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.9rem; transition: background 0.3s; font-weight: 600;">
-                        📁 Escolher Foto
-                      </label>
-                      <input type="file" id="FotoInput" accept="image/*" style="display: none;">
-                      <span id="FotoNomeArquivo" style="font-size: 0.85rem; color: #666; margin-left: 10px; word-break: break-all;">Nenhuma foto selecionada</span>
-                    </div>
-                    
-                    <div>
-                      <h5 style="margin-bottom: 1vh; font-size: 0.95rem;">Posição da Foto no Currículo:</h5>
-                      <div class="alinhamento-foto" style="display: flex; gap: 8px;">
-                        <button type="button" class="BtnAlinhamento active" data-posicao="esquerda" style="flex: 1; margin-top: 0; padding: 6px 12px; font-size: 0.85rem; border-radius: 20px; border: 1px solid var(--Botoes); background: var(--Botoes); color: white; cursor: pointer; font-weight: 600;">Esquerda</button>
-                        <button type="button" class="BtnAlinhamento" data-posicao="centro" style="flex: 1; margin-top: 0; padding: 6px 12px; font-size: 0.85rem; border-radius: 20px; border: 1px solid var(--Botoes); background: white; color: var(--Botoes); cursor: pointer; font-weight: 600;">Centro</button>
-                        <button type="button" class="BtnAlinhamento" data-posicao="direita" style="flex: 1; margin-top: 0; padding: 6px 12px; font-size: 0.85rem; border-radius: 20px; border: 1px solid var(--Botoes); background: white; color: var(--Botoes); cursor: pointer; font-weight: 600;">Direita</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="opcoes-foto-toggle" style="margin-bottom: 1.5vh">
+              <label
+                class="switch-container"
+                style="
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                  font-weight: normal;
+                  gap: 8px;
+                "
+              >
+                <input
+                  type="checkbox"
+                  id="IncluirFoto"
+                  name="incluir-foto"
+                  style="
+                    margin-top: 0;
+                    width: auto;
+                    height: auto;
+                    cursor: pointer;
+                  "
+                />
+                <span>Deseja incluir foto no currículo?</span>
+              </label>
             </div>
-            <button type="submit" class="Prosegir Btn-submit1">
+
+            <div
+              id="ControleFotoUpload"
+              class="controle-foto-upload"
+              style="display: none; flex-direction: column; gap: 1.5vh"
+            >
+              <div>
+                <label
+                  for="FotoInput"
+                  class="custom-file-upload"
+                  style="
+                    display: inline-block;
+                    background-color: var(--Botoes);
+                    color: white;
+                    padding: 8px 16px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                    transition: background 0.3s;
+                    font-weight: 600;
+                  "
+                >
+                  📁 Escolher Foto
+                </label>
+                <input
+                  type="file"
+                  id="FotoInput"
+                  accept="image/*"
+                  style="display: none"
+                />
+                <span
+                  id="FotoNomeArquivo"
+                  style="
+                    font-size: 0.85rem;
+                    color: #666;
+                    margin-left: 10px;
+                    word-break: break-all;
+                  "
+                  >Nenhuma foto selecionada</span
+                >
+              </div>
+
+              <div>
+                <h5 style="margin-bottom: 1vh; font-size: 0.95rem">
+                  Posição da Foto no Currículo:
+                </h5>
+                <div class="alinhamento-foto" style="display: flex; gap: 8px">
+                  <button
+                    type="button"
+                    class="BtnAlinhamento active"
+                    data-posicao="esquerda"
+                    style="
+                      flex: 1;
+                      margin-top: 0;
+                      padding: 6px 12px;
+                      font-size: 0.85rem;
+                      border-radius: 20px;
+                      border: 1px solid var(--Botoes);
+                      background: var(--Botoes);
+                      color: white;
+                      cursor: pointer;
+                      font-weight: 600;
+                    "
+                  >
+                    Esquerda
+                  </button>
+                  <button
+                    type="button"
+                    class="BtnAlinhamento"
+                    data-posicao="centro"
+                    style="
+                      flex: 1;
+                      margin-top: 0;
+                      padding: 6px 12px;
+                      font-size: 0.85rem;
+                      border-radius: 20px;
+                      border: 1px solid var(--Botoes);
+                      background: white;
+                      color: var(--Botoes);
+                      cursor: pointer;
+                      font-weight: 600;
+                    "
+                  >
+                    Centro
+                  </button>
+                  <button
+                    type="button"
+                    class="BtnAlinhamento"
+                    data-posicao="direita"
+                    style="
+                      flex: 1;
+                      margin-top: 0;
+                      padding: 6px 12px;
+                      font-size: 0.85rem;
+                      border-radius: 20px;
+                      border: 1px solid var(--Botoes);
+                      background: white;
+                      color: var(--Botoes);
+                      cursor: pointer;
+                      font-weight: 600;
+                    "
+                  >
+                    Direita
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="Prosegir Btn-submit1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 74 74"
+            height="30"
+            width="30"
+          >
+            <circle
+              stroke-width="3"
+              stroke="white"
+              r="35.5"
+              cy="37"
+              cx="37"
+            ></circle>
+            <path
+              fill="white"
+              d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
+                  38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
+                   25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
+                    45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
+                    47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+            ></path>
+          </svg>
+        </button>
+        <!-------------------------------------------Segunda Etapa--------------------------------->
+        <div class="DivEtapa2" id="DivEtapa2">
+          <h2>Objetivos</h2>
+          <textarea
+            id="Objetivos"
+            cols="48"
+            rows="15"
+            placeholder=" Descreva seu objetivo profissional"
+            autofocus
+          ></textarea>
+
+          <div class="DivEnsinoMédio">
+            <h2>Ensino Médio</h2>
+            <button
+              type="button"
+              onclick="DivEnsinoMédio()"
+              class="BtnIncompleto"
+            >
+              <input
+                type="radio"
+                name="EsinoMédio"
+                class="InptRadioEsinoMédio1"
+                id="incompleto"
+                autofocus
+              />
+              <label for="incompleto">Incompleto</label>
+            </button>
+
+            <button
+              type="button"
+              onclick="DivEnsinoMédio()"
+              class="BtnCompleto"
+            >
+              <input
+                type="radio"
+                name="EsinoMédio"
+                class="InptRadioEsinoMédio2"
+                id="completo"
+              />
+              <label for="completo">Completo</label>
+            </button>
+
+            <div class="DivIformaçãoEscola" id="DivIformaçãoEscola">
+              <label for="Colegio" class="labelColoegio">Nome Do Colegio</label>
+              <input
+                type="text"
+                class="Colegio"
+                id="Colegio"
+                placeholder="Digite o nome do colegio de formação"
+              />
+              <label for="DataDeFormação" class="labelColoegio"
+                >Ano De Formação</label
+              >
+              <input
+                type="text"
+                class="DataDeFormação"
+                id="DataDeFormação"
+                placeholder="Digite a data de formação"
+              />
+            </div>
+          </div>
+
+          <h2>Formação</h2>
+          <form autocomplete="on" class="formCurso1" id="FormFormacao1">
+            <label for="Curso">Curso</label>
+            <input
+              type="text"
+              class="Curso"
+              id="Curso"
+              placeholder="Digite o nome do curso"
+            />
+
+            <label for="NomeInstituicao">Nome da instituição</label>
+            <input
+              type="text"
+              class="NomeInstituicao"
+              id="NomeInstituicao"
+              placeholder="Digite o nome da instituição"
+            />
+
+            <label for="AnoConclusao">Ano de Conclusão</label>
+            <input
+              type="text"
+              class="AnoConclusao"
+              id="AnoConclusao"
+              placeholder="0000-0000"
+            />
+
+            <button
+              type="button"
+              class="BtnADDCurso BtnAdicionar"
+              id="BtnAdicionar"
+            >
+              Adcionar Curso
+            </button>
+          </form>
+          <div class="DivBtnEtapa2">
+            <button
+              type="button"
+              class="Voltar Btn-Voltar"
+              onclick="voltarDiv1()"
+            >
+              <a href="#NavInicial">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 74 74"
+                  height="30"
+                  width="30"
+                >
+                  <circle
+                    stroke-width="3"
+                    stroke="white"
+                    r="35.5"
+                    cy="37"
+                    cx="37"
+                  ></circle>
+                  <path
+                    fill="white"
+                    d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
+                        38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
+                        25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
+                          45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
+                          47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                  ></path>
+                </svg>
+              </a>
+            </button>
+            <button type="submit" class="Prosegir Btn-submit2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -149,434 +494,657 @@
                 height="30"
                 width="30"
               >
-                <circle stroke-width="3" stroke="white" r="35.5" cy="37" cx="37"></circle>
+                <circle
+                  stroke-width="3"
+                  stroke="white"
+                  r="35.5"
+                  cy="37"
+                  cx="37"
+                ></circle>
                 <path
                   fill="white"
                   d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
-                  38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
-                   25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
-                    45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
-                    47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                        38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
+                        25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
+                          45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
+                          47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
                 ></path>
               </svg>
             </button>
-<!-------------------------------------------Segunda Etapa--------------------------------->
-            <div class="DivEtapa2" id="DivEtapa2">
-                <h2>Objetivos</h2>
-                <textarea  id="Objetivos" cols="48" rows="15" placeholder=" Descreva seu objetivo profissional" autofocus></textarea>
-                
-                
-                <div class="DivEnsinoMédio">
-                   <h2>Ensino Médio</h2>
-                  <button type="button" onclick="DivEnsinoMédio()" class="BtnIncompleto">
-                   <input type="radio" name="EsinoMédio" class="InptRadioEsinoMédio1"  id="incompleto" autofocus> 
-                   <label for="incompleto">Incompleto</label>
-                  </button>
-
-                  <button type="button" onclick="DivEnsinoMédio()" class="BtnCompleto">
-                   <input type="radio" name="EsinoMédio" class="InptRadioEsinoMédio2"  id="completo">
-                   <label for="completo">Completo</label>
-                  </button>
-
-                   <div class="DivIformaçãoEscola" id="DivIformaçãoEscola">
-                    <label for="Colegio" class="labelColoegio">Nome Do Colegio</label>
-                    <input type="text" class="Colegio" id="Colegio" placeholder="Digite o nome do colegio de formação">
-                    <label for="DataDeFormação" class="labelColoegio">Ano De Formação</label>
-                    <input type="text" class="DataDeFormação" id="DataDeFormação" placeholder="Digite a data de formação">
-                   </div>
-                </div>
-
-                <h2>Formação</h2>     
-                <form  autocomplete="on" class="formCurso1" id="FormFormacao1">
-
-                  <label for="Curso">Curso</label>
-                  <input type="text" class="Curso" id="Curso" placeholder="Digite o nome do curso">
-
-                  <label for="NomeInstituicao">Nome da instituição</label>
-                  <input type="text" class="NomeInstituicao" id="NomeInstituicao" placeholder="Digite o nome da instituição">
-                  
-                  <label for="AnoConclusao">Ano de Conclusão</label>
-                  <input type="text" class="AnoConclusao" id="AnoConclusao" placeholder="0000-0000">
-          
-                  
-                  <button type="button" class="BtnADDCurso BtnAdicionar" id="BtnAdicionar">Adcionar Curso</button>
-                
-                </form>
-                <div class="DivBtnEtapa2">
-                
-                <button type="button" class="Voltar Btn-Voltar" onclick="voltarDiv1()">
-                  <a href="#NavInicial">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 74 74"
-                      height="30"
-                      width="30"
-                    >
-                      <circle stroke-width="3" stroke="white" r="35.5" cy="37" cx="37"></circle>
-                      <path
-                        fill="white"
-                        d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
-                        38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
-                        25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
-                          45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
-                          47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-                      ></path>
-                    </svg>
-                  </a>
-                </button> 
-                <button type="submit" class=" Prosegir Btn-submit2">
-              
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 74 74"
-                      height="30"
-                      width="30"
-                    >
-                      <circle stroke-width="3" stroke="white" r="35.5" cy="37" cx="37"></circle>
-                      <path
-                        fill="white"
-                        d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
-                        38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
-                        25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
-                          45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
-                          47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-                      ></path>
-                    </svg>
-               
-                </button>
-               
-                </div>
-            </div>
-        </form>
-<!-------------------------------------------Terceira Etapa--------------------------------->              
-        <form action=""  autocomplete="on" class="formulario2 scroll-animate scroll-animate-delay-3" id="FormFormulario2">  
-          
-                <h2 class="ExperiênciaH2">Experiência Profissional</h2>
-               
-                  <label for="Cargo">Cargo</label>
-                  <input type="text" class="Cargo" id="Cargo" placeholder="Digite o nome do cargo">
-
-                  <label for="NomeEmpresa">Nome da empresa</label>
-                  <input type="text" class="NomeEmpresa" id="NomeEmpresa" placeholder="Digite o nome da empresa">
-                  
-                  <label for="Periodo">Ano de Entrada e Saída</label>
-                  <input type="text" class="AnoEntradaSaida" id="Periodo" placeholder="0000-0000">
-                  <label for="DescricaoAtividades">Descrição das atividades</label>
-                  <textarea class="DescricaoAtividades" name="DescricaoAtividades" id="DescricaoAtividades" cols="48" rows="10" placeholder="Descreva suas atividades e responsabilidades no cargo"></textarea>
-                  <button type="button" class=" BtnAddExperiencia BtnAdicionarExp" id="btnAdicionarExp">Adcionar Experiência</button>
-
-                  <h2 class="HabilidadesTécnicasH2">Habilidades Técnicas</h2>
-                  <label class="LabelHabilidades" for="Habilidades">Habilidades</label>
-                  <input type="text" class="Habilidades" id="Habilidades" placeholder="Digite suas habilidades técnicas">
-                  <button type="button" class=" BtnAddHabilidades BtnAdicionarHabili" id="btnHabilidades">Adicionar Habilidades Técnicas </button> 
-
-
-                <h4 class="HabilitaçãoH4">Habilitação</h4>
-                  <div class="Habilitação">
-                    <button type="button" onclick="mostrarInputOutros()" class="BtnInputA">
-                        <input type="radio" name="rede-social" class="InputHabilitação" id="A">
-                        <label for="A">Categoria A</label>
-                    </button>
-
-                    <button type="button" onclick="mostrarInputOutros()" class="BtnInputB">
-                        <input type="radio" name="rede-social" class="InputHabilitação" id="B">
-                        <label for="B">Categoria B</label>
-                    </button>
-
-                    <button type="button" onclick="mostrarInputOutros()" class="BtnInputAB">
-                        <input type="radio" name="rede-social" class="InputHabilitação" id="A/B">
-                        <label for="A/B">Categoria A/B</label>
-                    </button>
-
-                    <button type="button" onclick="mostrarInputOutros()" class="BtnInputOutras">
-                        <input type="radio" name="rede-social" class="InputHabilitação" id="Outros">
-                        <label for="Outros">Outros</label>
-                    </button>
-                  <div class="DivInputOutros" id="DivInputOutros">
-                    <label for="InputOutros" class="LabelHabilitaçã">Digite outras habilitações</label>
-                    <input type="text" name="Habilitação" class="InputOutras" id="InputOutros" placeholder="Digite outras habilitações que queira destacar no currículo">
-                  </div>
-                </div>
-                <button type="button" class=" BtnAddHabilidades BtnAdicionarHabili" id="btnAdicionarHabilitação">Adcionar Habilitação</button>
-                  
-                <label for="InformaçõesAdicionais">Informações Adicionais </label>
-                <input type="text" class="InformaçõesAdicionais" id="InformaçõesAdicionais" placeholder="Digite informações adicionais que queira destacar no currículo">
-                <button type="button" class=" BtnAddHabilidades BtnAdicionarHabili" id="btnAdicionarInfoAdicional">Adcionar Informações Adicionais</button>
-            
-                <div class="DivBtnEtapa2">
-                  <button type="button" class="Voltar Btn-Voltar" onclick="voltarDiv2()">
-                    <a href="#NavInicial"> 
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 74 74"
-                        height="30"
-                        width="30"
-                      >
-                        <circle stroke-width="3" stroke="white" r="35.5" cy="37" cx="37"></circle>
-                        <path
-                          fill="white"
-                          d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
-                          38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
-                          25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
-                            45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
-                            47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-                        ></path>
-                      </svg>
-                    </a>   
-                  </button>
-                  <button type="submit" class=" Prosegir Btn-submit3">
-                    
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 74 74"
-                        height="30"
-                        width="30"
-                      >
-                        <circle stroke-width="3" stroke="white" r="35.5" cy="37" cx="37"></circle>
-                        <path
-                          fill="white"
-                          d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
-                          38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
-                          25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
-                            45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
-                            47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-                        ></path>
-                      </svg>
-                  </button>
-                </div>
-                  
-        </form> 
-
-<!---------------------------Mostrar as informaçoes da pessoa no curriculo--------------------->        
-        <section class="section1 scroll-animate scroll-animate-delay-4" id="SectionCurriculo">
-            <!-- Aviso de Edição Direta -->
-            <div class="aviso-edicao-direta" id="AvisoEdicaoDireta" style="margin-bottom: 2vh; padding: 10px; background-color: rgba(15, 76, 92, 0.1); border-left: 4px solid var(--Azul-petróleo); border-radius: 4px; font-size: 0.9rem; color: var(--Azul-petróleo); display: flex; align-items: center; gap: 8px;">
-                <span>✏️</span>
-                <span><strong>Modo de Revisão:</strong> Você pode clicar e editar qualquer texto diretamente na folha do currículo abaixo!</span>
-            </div>
-
-            <!-- Cabeçalho do Currículo (Foto + Dados Pessoais) -->
-            <div class="cv-header" id="CvHeader" style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 2vh; flex-direction: row;">
-                <div class="foto-cv-container" id="FotoCvContainer" style="display: none; flex-shrink: 0; width: 120px; height: 120px;">
-                    <img id="FotoCv" src="" alt="Foto do Perfil" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 3px solid var(--Azul-petróleo);">
-                </div>
-                <div class="cv-header-text" style="flex-grow: 1;">
-                    <h2 class="Nome-Cv" id="NomeCv" contenteditable="true" style="text-align: left; margin-bottom: 1vh;" data-placeholder="Seu Nome Completo"></h2>
-                    <p class="Cidade-Cv" id="CidadeCv" contenteditable="true" data-placeholder="Cidade - Estado"></p>
-                    <p class="email-Cv" id="EmailCv" contenteditable="true" data-placeholder="E-mail"></p>
-                    <p class="Whatsapp-Cv" id="WhatsappCv" contenteditable="true" data-placeholder="Telefone"></p>
-                    <p class="Github-Cv" id="GithubCv" contenteditable="true" data-placeholder="Link do Github"></p>
-                    <p class="LinkedIn-Cv" id="LinkedInCv" contenteditable="true" data-placeholder="Link do LinkedIn"></p>
-                </div>
-            </div>
-            
-            <hr class="LinhaHorizontal">
-            
-            <h2 class="Objetivo-Cv" id="H2ObjetivoCv">Objetivos</h2>
-            <p class="Objetivo-Cv" id="ObjetivoCv" contenteditable="true" data-placeholder="Escreva seu objetivo profissional aqui..."></p>
-            
-            <h2 class="Formacao-Cv" id="H2FormacaoCv">Formação</h2>
-            <p class="EnsinoMedioCv" id="EnsinoMedioCv" contenteditable="true" data-placeholder="Ensino Médio..."></p>
-            <div class="lista" id="ListaFormacao" contenteditable="true"></div>
-            
-            <h2 class="ExperienciaCv" id="H2ExperienciaCv">Experiência Profissional</h2>
-            <div class="ListaCargo-Cv" id="ListaCargoCv" contenteditable="true"></div>
-            <p class="DescriçãoCV" id="DescriçãoCv" style="display: none;"></p>
-            
-            <h2 class="H2Habilidades" id="H2Habilidades">Habilidades Técnicas</h2>
-            <div class="HabilidadesCv" id="HabilidadesCv" contenteditable="true"></div>
-            <p class="HabilitaçãoCv" id="HabilitaçãoCv" contenteditable="true" data-placeholder="Habilitações..."></p>
-            
-            <h2 class="informacoes-adicionais" id="Informacoes">Informações Adicionais</h2>
-            <div class="InformaçõesAdicionaisCv" id="InformaçõesAdicionaisCv" contenteditable="true"></div>
-            
-          <button type="submit" class="Inprimir BtnImprimir">Imprimir Currículo</button>
-              
-          <div class="DivBtnPrint">
-            <button type="button" class="Voltar BtnPrintVoltar" onclick="voltarDiv3()">
-               <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 74 74"
-                      height="30"
-                      width="30"
-                    >
-                      <circle stroke-width="3" stroke="white" r="35.5" cy="37" cx="37"></circle>
-                      <path
-                        fill="white"
-                        d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
-                        38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
-                        25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
-                          45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
-                          47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-                      ></path>
-                    </svg>
-            </button>
-            <button type="button" class="Finalizar BtnFinalizar" onclick="finalizarCv()">Finalizar</button>
           </div>
-        </section>
-        </section>
+        </div>
+      </form>
+      <!-------------------------------------------Terceira Etapa--------------------------------->
+      <form
+        action=""
+        autocomplete="on"
+        class="formulario2 scroll-animate scroll-animate-delay-3"
+        id="FormFormulario2"
+      >
+        <h2 class="ExperiênciaH2">Experiência Profissional</h2>
+
+        <label for="Cargo">Cargo</label>
+        <input
+          type="text"
+          class="Cargo"
+          id="Cargo"
+          placeholder="Digite o nome do cargo"
+        />
+
+        <label for="NomeEmpresa">Nome da empresa</label>
+        <input
+          type="text"
+          class="NomeEmpresa"
+          id="NomeEmpresa"
+          placeholder="Digite o nome da empresa"
+        />
+
+        <label for="Periodo">Ano de Entrada e Saída</label>
+        <input
+          type="text"
+          class="AnoEntradaSaida"
+          id="Periodo"
+          placeholder="0000-0000"
+        />
+        <label for="DescricaoAtividades">Descrição das atividades</label>
+        <textarea
+          class="DescricaoAtividades"
+          name="DescricaoAtividades"
+          id="DescricaoAtividades"
+          cols="48"
+          rows="10"
+          placeholder="Descreva suas atividades e responsabilidades no cargo"
+        ></textarea>
+        <button
+          type="button"
+          class="BtnAddExperiencia BtnAdicionarExp"
+          id="btnAdicionarExp"
+        >
+          Adcionar Experiência
+        </button>
+
+        <h2 class="HabilidadesTécnicasH2">Habilidades Técnicas</h2>
+        <label class="LabelHabilidades" for="Habilidades">Habilidades</label>
+        <input
+          type="text"
+          class="Habilidades"
+          id="Habilidades"
+          placeholder="Digite suas habilidades técnicas"
+        />
+        <button
+          type="button"
+          class="BtnAddHabilidades BtnAdicionarHabili"
+          id="btnHabilidades"
+        >
+          Adicionar Habilidades Técnicas
+        </button>
+
+        <h4 class="HabilitaçãoH4">Habilitação</h4>
+        <div class="Habilitação">
+          <button
+            type="button"
+            onclick="mostrarInputOutros()"
+            class="BtnInputA"
+          >
+            <input
+              type="radio"
+              name="rede-social"
+              class="InputHabilitação"
+              id="A"
+            />
+            <label for="A">Categoria A</label>
+          </button>
+
+          <button
+            type="button"
+            onclick="mostrarInputOutros()"
+            class="BtnInputB"
+          >
+            <input
+              type="radio"
+              name="rede-social"
+              class="InputHabilitação"
+              id="B"
+            />
+            <label for="B">Categoria B</label>
+          </button>
+
+          <button
+            type="button"
+            onclick="mostrarInputOutros()"
+            class="BtnInputAB"
+          >
+            <input
+              type="radio"
+              name="rede-social"
+              class="InputHabilitação"
+              id="A/B"
+            />
+            <label for="A/B">Categoria A/B</label>
+          </button>
+
+          <button
+            type="button"
+            onclick="mostrarInputOutros()"
+            class="BtnInputOutras"
+          >
+            <input
+              type="radio"
+              name="rede-social"
+              class="InputHabilitação"
+              id="Outros"
+            />
+            <label for="Outros">Outros</label>
+          </button>
+          <div class="DivInputOutros" id="DivInputOutros">
+            <label for="InputOutros" class="LabelHabilitaçã"
+              >Digite outras habilitações</label
+            >
+            <input
+              type="text"
+              name="Habilitação"
+              class="InputOutras"
+              id="InputOutros"
+              placeholder="Digite outras habilitações que queira destacar no currículo"
+            />
+          </div>
+        </div>
+        <button
+          type="button"
+          class="BtnAddHabilidades BtnAdicionarHabili"
+          id="btnAdicionarHabilitação"
+        >
+          Adcionar Habilitação
+        </button>
+
+        <label for="InformaçõesAdicionais">Informações Adicionais </label>
+        <input
+          type="text"
+          class="InformaçõesAdicionais"
+          id="InformaçõesAdicionais"
+          placeholder="Digite informações adicionais que queira destacar no currículo"
+        />
+        <button
+          type="button"
+          class="BtnAddHabilidades BtnAdicionarHabili"
+          id="btnAdicionarInfoAdicional"
+        >
+          Adcionar Informações Adicionais
+        </button>
+
+        <div class="DivBtnEtapa2">
+          <button
+            type="button"
+            class="Voltar Btn-Voltar"
+            onclick="voltarDiv2()"
+          >
+            <a href="#NavInicial">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 74 74"
+                height="30"
+                width="30"
+              >
+                <circle
+                  stroke-width="3"
+                  stroke="white"
+                  r="35.5"
+                  cy="37"
+                  cx="37"
+                ></circle>
+                <path
+                  fill="white"
+                  d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
+                          38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
+                          25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
+                            45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
+                            47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                ></path>
+              </svg>
+            </a>
+          </button>
+          <button type="submit" class="Prosegir Btn-submit3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 74 74"
+              height="30"
+              width="30"
+            >
+              <circle
+                stroke-width="3"
+                stroke="white"
+                r="35.5"
+                cy="37"
+                cx="37"
+              ></circle>
+              <path
+                fill="white"
+                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
+                          38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
+                          25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
+                            45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
+                            47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <!---------------------------Mostrar as informaçoes da pessoa no curriculo--------------------->
+      <section
+        class="section1 scroll-animate scroll-animate-delay-4"
+        id="SectionCurriculo"
+      >
+        <!-- Aviso de Edição Direta -->
+        <div
+          class="aviso-edicao-direta"
+          id="AvisoEdicaoDireta"
+          style="
+            margin-bottom: 2vh;
+            padding: 10px;
+            background-color: rgba(15, 76, 92, 0.1);
+            border-left: 4px solid var(--Azul-petróleo);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--Azul-petróleo);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          "
+        >
+          <span>✏️</span>
+          <span
+            ><strong>Modo de Revisão:</strong> Você pode clicar e editar
+            qualquer texto diretamente na folha do currículo abaixo!</span
+          >
+        </div>
+
+        <!-- Cabeçalho do Currículo (Foto + Dados Pessoais) -->
+        <div
+          class="cv-header"
+          id="CvHeader"
+          style="
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 2vh;
+            flex-direction: row;
+          "
+        >
+          <div
+            class="foto-cv-container"
+            id="FotoCvContainer"
+            style="display: none; flex-shrink: 0; width: 120px; height: 120px"
+          >
+            <img
+              id="FotoCv"
+              src=""
+              alt="Foto do Perfil"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 3px solid var(--Azul-petróleo);
+              "
+            />
+          </div>
+          <div class="cv-header-text" style="flex-grow: 1">
+            <h2
+              class="Nome-Cv"
+              id="NomeCv"
+              contenteditable="true"
+              style="text-align: left; margin-bottom: 1vh"
+              data-placeholder="Seu Nome Completo"
+            ></h2>
+            <p
+              class="Cidade-Cv"
+              id="CidadeCv"
+              contenteditable="true"
+              data-placeholder="Cidade - Estado"
+            ></p>
+            <p
+              class="email-Cv"
+              id="EmailCv"
+              contenteditable="true"
+              data-placeholder="E-mail"
+            ></p>
+            <p
+              class="Whatsapp-Cv"
+              id="WhatsappCv"
+              contenteditable="true"
+              data-placeholder="Telefone"
+            ></p>
+            <p
+              class="Github-Cv"
+              id="GithubCv"
+              contenteditable="true"
+              data-placeholder="Link do Github"
+            ></p>
+            <p
+              class="LinkedIn-Cv"
+              id="LinkedInCv"
+              contenteditable="true"
+              data-placeholder="Link do LinkedIn"
+            ></p>
+          </div>
+        </div>
+
+        <hr class="LinhaHorizontal" />
+
+        <h2 class="Objetivo-Cv" id="H2ObjetivoCv">Objetivos</h2>
+        <p
+          class="Objetivo-Cv"
+          id="ObjetivoCv"
+          contenteditable="true"
+          data-placeholder="Escreva seu objetivo profissional aqui..."
+        ></p>
+
+        <h2 class="Formacao-Cv" id="H2FormacaoCv">Formação</h2>
+        <p
+          class="EnsinoMedioCv"
+          id="EnsinoMedioCv"
+          contenteditable="true"
+          data-placeholder="Ensino Médio..."
+        ></p>
+        <div class="lista" id="ListaFormacao" contenteditable="true"></div>
+
+        <h2 class="ExperienciaCv" id="H2ExperienciaCv">
+          Experiência Profissional
+        </h2>
+        <div
+          class="ListaCargo-Cv"
+          id="ListaCargoCv"
+          contenteditable="true"
+        ></div>
+        <p class="DescriçãoCV" id="DescriçãoCv" style="display: none"></p>
+
+        <h2 class="H2Habilidades" id="H2Habilidades">Habilidades Técnicas</h2>
+        <div
+          class="HabilidadesCv"
+          id="HabilidadesCv"
+          contenteditable="true"
+        ></div>
+        <p
+          class="HabilitaçãoCv"
+          id="HabilitaçãoCv"
+          contenteditable="true"
+          data-placeholder="Habilitações..."
+        ></p>
+
+        <h2 class="informacoes-adicionais" id="Informacoes">
+          Informações Adicionais
+        </h2>
+        <div
+          class="InformaçõesAdicionaisCv"
+          id="InformaçõesAdicionaisCv"
+          contenteditable="true"
+        ></div>
+
+        <button type="submit" class="Inprimir BtnImprimir">
+          Imprimir Currículo
+        </button>
+
+        <div class="DivBtnPrint">
+          <button
+            type="button"
+            class="Voltar BtnPrintVoltar"
+            onclick="voltarDiv3()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 74 74"
+              height="30"
+              width="30"
+            >
+              <circle
+                stroke-width="3"
+                stroke="white"
+                r="35.5"
+                cy="37"
+                cx="37"
+              ></circle>
+              <path
+                fill="white"
+                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 
+                        38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792
+                        25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934
+                          45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 
+                          47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="Finalizar BtnFinalizar"
+            onclick="finalizarCv()"
+          >
+            Finalizar
+          </button>
+        </div>
+      </section>
+    </section>
     <!----------------------------------- Seção Contribuição -------------------------------------->
     <div id="Contribuição"></div>
     <div class="container-contribuicao scroll-animate">
-        <h1 class="titulo-contribuicao">Contribua com o Projeto</h1>
-        <p class="texto-contribuicao">
-            Sua contribuição nos ajuda a manter e melhorar o Kel Currículos. 
-            Qualquer valor é bem-vindo e nos motiva a continuar oferecendo ferramentas gratuitas para sua carreira.
+      <h1 class="titulo-contribuicao">Contribua com o Projeto</h1>
+      <p class="texto-contribuicao">
+        Sua contribuição nos ajuda a manter e melhorar o Kel Currículos.
+        Qualquer valor é bem-vindo e nos motiva a continuar oferecendo
+        ferramentas gratuitas para sua carreira.
+      </p>
+
+      <!-- QR Code Pix - Adicione a URL da sua imagem aqui -->
+      <div class="qr-container">
+        <img src="/Imagens/QR Code.jpg" alt="QR Code Pix" class="qr-imagem" />
+      </div>
+
+      <!-- Chave Pix Copia e Cola - Cole sua chave Pix aqui -->
+      <div class="pix-copia-ecola-container">
+        <label class="label-pix">Chave Pix (Copia e Cola):</label>
+        <input
+          type="text"
+          readonly
+          class="pix-input"
+          id="pixInput"
+          value="00020126400014br.gov.bcb.pix0111858526745320203Pix5204000053039865802BR5925CLERISTON_FERREIRA_BATIST6005UIBAI62110507Kel443163049B7C"
+          onclick="selecionarTexto(this)"
+        />
+        <button class="btn-copiar" onclick="copiarPix()">📋 Copiar Pix</button>
+      </div>
+
+      <div class="instrucoes">
+        <h3>Como contribuir:</h3>
+        <ol>
+          <li>Abra o aplicativo do seu banco ou carteira digital</li>
+          <li>Escolha a opção "Pix"</li>
+          <li>Escaneie o QR Code acima ou copie a chave Pix</li>
+          <li>Digite o valor que deseja contribuir</li>
+          <li>Confirme a transação</li>
+        </ol>
+        <p style="margin-top: 1vh; color: #666; font-size: 0.9rem">
+          <em>Agradecemos imensamente sua contribuição!</em>
         </p>
-
-        <!-- QR Code Pix - Adicione a URL da sua imagem aqui -->
-        <div class="qr-container">
-            <img src="/Imagens/QR Code.jpg" alt="QR Code Pix" class="qr-imagem">
-        </div>
-
-        <!-- Chave Pix Copia e Cola - Cole sua chave Pix aqui -->
-        <div class="pix-copia-ecola-container">
-            <label class="label-pix">Chave Pix (Copia e Cola):</label>
-            <input type="text" 
-                   readonly 
-                   class="pix-input" 
-                   id="pixInput" 
-                   value="00020126400014br.gov.bcb.pix0111858526745320203Pix5204000053039865802BR5925CLERISTON_FERREIRA_BATIST6005UIBAI62110507Kel443163049B7C"
-                   onclick="selecionarTexto(this)">
-            <button class="btn-copiar" onclick="copiarPix()">
-                📋 Copiar Pix
-            </button>
-        </div>
-
-        <div class="instrucoes">
-            <h3>Como contribuir:</h3>
-            <ol>
-                <li>Abra o aplicativo do seu banco ou carteira digital</li>
-                <li>Escolha a opção "Pix"</li>
-                <li>Escaneie o QR Code acima ou copie a chave Pix</li>
-                <li>Digite o valor que deseja contribuir</li>
-                <li>Confirme a transação</li>
-            </ol>
-            <p style="margin-top: 1vh; color: #666; font-size: 0.9rem;">
-                <em>Agradecemos imensamente sua contribuição!</em>
-            </p>
-        </div>
+      </div>
     </div>
     <!----------------------------------- Seção de Vagas de Emprego ------------------------------------>
     <div id="VagasEmprego"></div>
     <section class="section-vagas scroll-animate">
       <h2 class="TituloVagas">Vagas de Emprego</h2>
-      <p class="DescricaoVagas">Encontre oportunidades de trabalho nas melhores empresas</p>
+      <p class="DescricaoVagas">
+        Encontre oportunidades de trabalho nas melhores empresas
+      </p>
       <div class="carousel-wrapper">
-        <button class="carrossel-btn carrossel-btn-prev" aria-label="Vaga anterior">&#10094;</button>
+        <button
+          class="carrossel-btn carrossel-btn-prev"
+          aria-label="Vaga anterior"
+        >
+          &#10094;
+        </button>
         <div class="destaques-container carousel-track">
-           <div class="destaque-card">
-             <a href="https://www.instagram.com/bahiaagrovagas?igsh=MWFmNmluZWg0cTBlZA%3D%3D" target="_blank" class="destaque-link">
-               <img src="Imagens/AgroVagas.jpg" alt="Bahia Agrovagas" class="destaque-imagem">
-               <div class="destaque-content">
-                 <h3 class="destaque-titulo">Bahia Agrovagas</h3>
-                 <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
-                 <span class="btn-acessar">Acessar</span>
-               </div>
-             </a>
-           </div>
-
-           <div class="destaque-card">
-             <a href="https://www.instagram.com/empregandoirece" target="_blank" class="destaque-link">
-               <img src="Imagens/Emprega Irece.jpg" alt="Emprega Irece" class="destaque-imagem">
-               <div class="destaque-content">
-                 <h3 class="destaque-titulo">Emprega Irece</h3>
-                 <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
-                 <span class="btn-acessar">Acessar</span>
-               </div>
-             </a>
-           </div>
+          <div class="destaque-card">
+            <a
+              href="https://www.instagram.com/bahiaagrovagas?igsh=MWFmNmluZWg0cTBlZA%3D%3D"
+              target="_blank"
+              class="destaque-link"
+            >
+              <img
+                src="Imagens/AgroVagas.jpg"
+                alt="Bahia Agrovagas"
+                class="destaque-imagem"
+              />
+              <div class="destaque-content">
+                <h3 class="destaque-titulo">Bahia Agrovagas</h3>
+                <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
+                <span class="btn-acessar">Acessar</span>
+              </div>
+            </a>
+          </div>
 
           <div class="destaque-card">
-             <a href="https://www.instagram.com/empregosnabahia/?hl=pt" target="_blank" class="destaque-link">
-               <img src="/Imagens/Epregos na bahi.jpg" alt="Outra Vaga" class="destaque-imagem">
-               <div class="destaque-content">
-                 <h3 class="destaque-titulo">Empregos Bahia</h3>
-                 <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
-                 <span class="btn-acessar">Acessar</span>
-               </div>
-             </a>
-           </div>
+            <a
+              href="https://www.instagram.com/empregandoirece"
+              target="_blank"
+              class="destaque-link"
+            >
+              <img
+                src="Imagens/Emprega Irece.jpg"
+                alt="Emprega Irece"
+                class="destaque-imagem"
+              />
+              <div class="destaque-content">
+                <h3 class="destaque-titulo">Emprega Irece</h3>
+                <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
+                <span class="btn-acessar">Acessar</span>
+              </div>
+            </a>
+          </div>
 
-           <div class="destaque-card">
-             <a href="https://vagas.solides.com.br/vagas?page=1" target="_blank" class="destaque-link">
-               <img src="/Imagens/logo-solides-vagas.png" alt="Bahia Agrovagas" class="destaque-imagem">
-               <div class="destaque-content">
-                 <h3 class="destaque-titulo">Solides Vagas</h3>
-                 <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
-                 <span class="btn-acessar">Acessar</span>
-               </div>
-             </a>
-           </div>
+          <div class="destaque-card">
+            <a
+              href="https://www.instagram.com/empregosnabahia/?hl=pt"
+              target="_blank"
+              class="destaque-link"
+            >
+              <img
+                src="/Imagens/Epregos na bahi.jpg"
+                alt="Outra Vaga"
+                class="destaque-imagem"
+              />
+              <div class="destaque-content">
+                <h3 class="destaque-titulo">Empregos Bahia</h3>
+                <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
+                <span class="btn-acessar">Acessar</span>
+              </div>
+            </a>
+          </div>
 
-           <div class="destaque-card">
-             <a href="https://br.indeed.com/jobs?q=vagas+de+emprego&gclsrc=aw.ds&gad_source=1&gad_campaignid=23631987730&gbraid=0AAAAADf0oybfCEet9C9g9QUpMM0hiYGqG&gclid=CjwKCAjwqazPBhALEiwAOuXqdKUE1lhpvFUf9JHDc4Qh1ZU_bXjP2tq6lfiZHIS95esk8BxFihvsuBoCsxEQAvD_BwE&vjk=82d9864fd6378398" target="_blank" class="destaque-link">
-               <img src="/Imagens/indeed.png" alt="Emprega Irece" class="destaque-imagem">
-               <div class="destaque-content">
-                 <h3 class="destaque-titulo">Indeed</h3>
-                 <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
-                 <span class="btn-acessar">Acessar</span>
-               </div>
-             </a>
-           </div>
+          <div class="destaque-card">
+            <a
+              href="https://vagas.solides.com.br/vagas?page=1"
+              target="_blank"
+              class="destaque-link"
+            >
+              <img
+                src="/Imagens/logo-solides-vagas.png"
+                alt="Bahia Agrovagas"
+                class="destaque-imagem"
+              />
+              <div class="destaque-content">
+                <h3 class="destaque-titulo">Solides Vagas</h3>
+                <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
+                <span class="btn-acessar">Acessar</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="destaque-card">
+            <a
+              href="https://br.indeed.com/jobs?q=vagas+de+emprego&gclsrc=aw.ds&gad_source=1&gad_campaignid=23631987730&gbraid=0AAAAADf0oybfCEet9C9g9QUpMM0hiYGqG&gclid=CjwKCAjwqazPBhALEiwAOuXqdKUE1lhpvFUf9JHDc4Qh1ZU_bXjP2tq6lfiZHIS95esk8BxFihvsuBoCsxEQAvD_BwE&vjk=82d9864fd6378398"
+              target="_blank"
+              class="destaque-link"
+            >
+              <img
+                src="/Imagens/indeed.png"
+                alt="Emprega Irece"
+                class="destaque-imagem"
+              />
+              <div class="destaque-content">
+                <h3 class="destaque-titulo">Indeed</h3>
+                <p class="destaque-descricao">Econtre sua vaga de emprego.</p>
+                <span class="btn-acessar">Acessar</span>
+              </div>
+            </a>
+          </div>
         </div>
-        <button class="carrossel-btn carrossel-btn-next" aria-label="Próxima vaga">&#10095;</button>
+        <button
+          class="carrossel-btn carrossel-btn-next"
+          aria-label="Próxima vaga"
+        >
+          &#10095;
+        </button>
       </div>
       <div class="carrossel-dots"></div>
     </section>
 
     <footer class="scroll-animate scroll-animate-delay-5">
-  <div class="Div1">
+      <div class="Div1">
+        <!-- Logo e descrição -->
+        <div class="Div2">
+          <h2 class="KelCv">Kel Currículos</h2>
+          <p class="ParagrafoFooter">
+            Crie currículos profissionais em minutos e aumente suas chances no
+            mercado de trabalho.
+          </p>
+        </div>
 
-<!-- Logo e descrição -->
-<div class="Div2">
-  <h2 class="KelCv">Kel Currículos</h2>
-  <p class="ParagrafoFooter">
-    Crie currículos profissionais em minutos e aumente suas chances no mercado de trabalho.
-  </p>
-</div>
+        <!-- Links rápidos -->
+        <div class="LinkFooter">
+          <h3 class="H3Link">Links</h3>
+          <ul class="Ulfooter">
+            <li><a href="index.html" class="Linka">Criar currículo</a></li>
+            <li><a href="/Paginas/Contatos.html" class="Linka">Contato</a></li>
+            <li><a href="#VagasEmprego" class="Linka">Vagas de Emprego</a></li>
+          </ul>
+        </div>
+        <!-- Suporte -->
+        <div class="DivSuporte">
+          <h3 class="H3Suporte">Suporte</h3>
+          <ul class="UlSuporte">
+            <li><a href="/Paginas/Ajuda.html" class="LinkSuporte">Ajuda</a></li>
+            <li><a href="#" class="LinkSuporte">Termos de uso</a></li>
+            <li><a href="#" class="LinkSuporte">Privacidade</a></li>
+          </ul>
+        </div>
 
-<!-- Links rápidos -->
-<div class="LinkFooter">
-  <h3 class="H3Link">Links</h3>
-  <ul class="Ulfooter">
-    <li><a href="index.html" class="Linka">Criar currículo</a></li>
-    <li><a href="/Paginas/Contatos.html" class="Linka">Contato</a></li>
-    <li><a href="#VagasEmprego" class="Linka">Vagas de Emprego</a></li>
-  </ul>
-</div>
-<!-- Suporte -->
-<div class="DivSuporte">
-  <h3 class="H3Suporte">Suporte</h3>
-  <ul class="UlSuporte">
-    <li><a href="/Paginas/Ajuda.html" class="LinkSuporte">Ajuda</a></li>
-    <li><a href="#" class="LinkSuporte">Termos de uso</a></li>
-    <li><a href="#" class="LinkSuporte">Privacidade</a></li>
-  </ul>
-</div>
+        <!-- Redes sociais -->
+        <div class="DivSociais">
+          <h3 class="H3Sociais">Siga-nos</h3>
+          <p class="PSociais">
+            LinkedIn •
+            <a
+              class="Link-InstagramFooter"
+              href="https://www.instagram.com/cleriston.ferreira10/"
+              >Instagram </a
+            >• Twitter
+          </p>
+        </div>
+      </div>
 
-<!-- Redes sociais -->
-<div class="DivSociais">
-  <h3 class="H3Sociais">Siga-nos</h3>
-  <p class="PSociais">LinkedIn • <a class="Link-InstagramFooter" href="https://www.instagram.com/cleriston.ferreira10/">Instagram </a>• Twitter</p>
-</div>
+      <!-- Linha inferior -->
 
-  </div>
-
-  <!-- Linha inferior -->
-
-  <div class="DivFooter2">
-    <p class="DivFooterP@" id="DivFooterP@">© {AnoAtual()} Kel Designer. Todos os direitos reservados.</p>
-  </div>
-</footer>
-</body>
-<script src="JavaScript/script.js"></script>
-<script src="JavaScript/MudarDeForm.js"></script>
-<script src="JavaScript/DadosNaTela.js"></script>
-<script src="JavaScript/ScriptContribuição.js"></script>
+      <div class="DivFooter2">
+        <p class="DivFooterP@" id="DivFooterP@">
+          © {AnoAtual()} Kel Designer. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="JavaScript/script.js"></script>
+  <script src="JavaScript/MudarDeForm.js"></script>
+  <script src="JavaScript/DadosNaTela.js"></script>
+  <script src="JavaScript/ScriptContribuição.js"></script>
 </html>
