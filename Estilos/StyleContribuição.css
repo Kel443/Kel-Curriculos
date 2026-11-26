@@ -119,3 +119,57 @@ body{
     margin-bottom: 0.5vh;
     color: var(--Cinza-Cinza);
 }
+
+/* ===== Responsividade Contribuição ===== */
+@media (max-width: 768px) {
+    .container-contribuicao {
+        margin: 3vh 2vw;
+        padding: 3vh 2vh;
+    }
+    .titulo-contribuicao {
+        font-size: 1.8rem;
+    }
+    .texto-contribuicao {
+        font-size: 1rem;
+    }
+    .qr-imagem {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-contribuicao {
+        margin: 2vh 1vw;
+        padding: 2vh 1.5vh;
+        border-radius: 1.5vh;
+    }
+    .titulo-contribuicao {
+        font-size: 1.4rem;
+    }
+    .texto-contribuicao {
+        font-size: 0.9rem;
+        margin-bottom: 2vh;
+    }
+    .qr-imagem {
+        max-width: 200px;
+        width: 70%;
+    }
+    .pix-input {
+        font-size: 0.75rem;
+        padding: 1vh;
+    }
+    .btn-copiar {
+        width: 100%;
+        padding: 1.2vh;
+        font-size: 0.95rem;
+    }
+    .instrucoes {
+        padding: 1.5vh;
+    }
+    .instrucoes h3 {
+        font-size: 1rem;
+    }
+    .instrucoes li {
+        font-size: 0.9rem;
+    }
+}

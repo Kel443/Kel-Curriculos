@@ -2,45 +2,72 @@
  // ==================== PÁGINA DE CONTRIBUIÇÃO ====================
 
 // Copiar Pix para a área de transferência
+// Funciona em todos os navegadores (incluindo mobile e HTTP)
 function copiarPix() {
     const pixInput = document.getElementById('pixInput');
+    if (!pixInput) return;
     const pix = pixInput.value;
-    
-    navigator.clipboard.writeText(pix).then(() => {
-        const btn = document.querySelector('.btn-copiar');
+    const btn = document.querySelector('.btn-copiar');
+
+    function onSuccess() {
         if (btn) {
-            const textoOriginal = btn.textContent;
             btn.textContent = '✓ Copiado!';
             btn.classList.add('copiado');
             setTimeout(() => {
-                btn.textContent = textoOriginal;
+                btn.textContent = '📋 Copiar Pix';
                 btn.classList.remove('copiado');
             }, 2000);
         }
-    }).catch(err => {
-        // Fallback para navegadores antigos
+    }
+
+    function onError() {
+        // Seleciona o texto para cópia manual
+        pixInput.select();
+        pixInput.setSelectionRange(0, 99999);
+        try {
+            const ok = document.execCommand('copy');
+            if (ok) {
+                onSuccess();
+            } else if (btn) {
+                btn.textContent = 'Selecione e copie (Ctrl+C)';
+                setTimeout(() => { btn.textContent = '📋 Copiar Pix'; }, 3000);
+            }
+        } catch (e) {
+            if (btn) {
+                btn.textContent = 'Selecione e copie (Ctrl+C)';
+                setTimeout(() => { btn.textContent = '📋 Copiar Pix'; }, 3000);
+            }
+        }
+    }
+
+    // Tenta usar a API moderna primeiro
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(pix)
+            .then(onSuccess)
+            .catch(onError);
+    } else {
+        // Fallback com textarea oculta (funciona em HTTP e navegadores antigos)
         const textArea = document.createElement('textarea');
         textArea.value = pix;
         textArea.style.position = 'fixed';
-        textArea.style.left = '-999999px';
+        textArea.style.left = '-9999px';
+        textArea.style.top = '-9999px';
+        textArea.style.opacity = '0';
         document.body.appendChild(textArea);
+        textArea.focus();
         textArea.select();
         try {
-            document.execCommand('copy');
-            const btn = document.querySelector('.btn-copiar');
-            if (btn) {
-                btn.textContent = '✓ Copiado!';
-                btn.classList.add('copiado');
-                setTimeout(() => {
-                    btn.textContent = '📋 Copiar Pix';
-                    btn.classList.remove('copiado');
-                }, 2000);
+            const ok = document.execCommand('copy');
+            if (ok) {
+                onSuccess();
+            } else {
+                onError();
             }
         } catch (err) {
-            alert('Erro ao copiar. Por favor, copie manualmente.');
+            onError();
         }
         document.body.removeChild(textArea);
-    });
+    }
 }
 
 // Selecionar texto do input

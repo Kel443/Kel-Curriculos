@@ -111,8 +111,11 @@ body {
 .Titulo {
     font-family: var(--font-Secundaria);
     font-weight: 500;
-    color:black;
-    margin-top: -10vh;
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+    padding: 0 15px;
+    word-wrap: break-word;
 }
 
 .Descrição {
@@ -121,6 +124,9 @@ body {
     font-size: 1.5rem;
     font-weight: 500;
     font-family: var(--font-Primaria);
+    text-align: center;
+    padding: 0 15px;
+    word-wrap: break-word;
 }
 h2{
     font-size: 1.5rem;
@@ -128,6 +134,7 @@ h2{
 
 .formulario1{
     width: 35vw;
+    max-width: 100%;
     display: flex;
     padding: 3vh;
     margin-top: 0vh;
@@ -151,6 +158,9 @@ input {
     border: none;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.39);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 input:focus {
@@ -159,6 +169,7 @@ input:focus {
 }
 .section1 {
     width: 50vw;
+    max-width: 100%;
     padding: 3vh;
     display: flex;
     border: 1px solid rgba(0, 0, 0, 0.274);
@@ -371,6 +382,10 @@ select:focus {
 
 textarea {
     padding: 5px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
 #Objetivos {
@@ -437,6 +452,7 @@ textarea {
 
 .formulario2{
     width: 35vw;
+    max-width: 100%;
     display: none;
     padding: 3vh;
     margin-top: 0vh;
@@ -462,6 +478,7 @@ textarea {
 }
 .formulario3{
     width: 30vw;
+    max-width: 100%;
     display: none;
     padding: 3vh;
     margin-top: 0vh;
@@ -627,6 +644,7 @@ footer {
 /* ------------------- Seção de Vagas de Emprego --------------------- */
 .section-vagas {
     width: 70vw;
+    max-width: 100%;
     padding: 4vh 3vh;
     margin: 4vh auto;
     display: flex;

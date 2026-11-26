@@ -13,6 +13,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
     </script>
+    <link rel="stylesheet" href="Estilos/Modal.css">
     <link rel="stylesheet" href="Estilos/style.css" />
     <link rel="stylesheet" href="Estilos/estilosDeBotoes.css" />
     <link rel="stylesheet" href="Estilos/MediaQuery.css" />
@@ -58,6 +59,29 @@
         </li>
       </ul>
     </nav>
+
+    <!-- Modal Pix -->
+    <div class="modal-overlay" id="pixModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Pagamento via Pix</h2>
+                <p>Escaneie o QR Code abaixo ou copie a chave Pix e contribua com o projeto.</p>
+            </div>
+
+            <div class="qr-container">
+                <img src="/Imagens/QR Code.jpg" alt="Código QR do Pix">
+            </div>
+
+            <div class="pix-code-box" id="pixCodeText">00020126400014br.gov.bcb.pix0111858526745320203Pix5204000053039865802BR5925CLERISTON_FERREIRA_BATIST6005UIBAI62110507Kel443163049B7C</div>
+
+            <button class="btn-copy" id="copyBtn" onclick="copyPixCode()">
+                Copiar Código Pix
+            </button>
+        </div>
+    </div>
+
     <h1 class="Titulo scroll-animate">
       Crie Seu Currículo e Mostre Seu Potencial
     </h1>
@@ -1142,6 +1166,7 @@
       </div>
     </footer>
   </body>
+  <script src="JavaScript/Modal.js"></script>
   <script src="JavaScript/script.js"></script>
   <script src="JavaScript/MudarDeForm.js"></script>
   <script src="JavaScript/DadosNaTela.js"></script>
